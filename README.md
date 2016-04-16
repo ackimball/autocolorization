@@ -1,2 +1,2 @@
 # autocolorization
-Use frame-by-frame colorization to colorize a video
+Use deep learning colorization frame-by-frame to colorize a video
