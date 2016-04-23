@@ -10,6 +10,13 @@ We accomplished this by leveraging pretrained models released by the authors of 
 
 We created a docker container so users can easily colorize, denoise, and upscale their own videos on any machine that has docker installed (although you'll need a good GPU to do this quickly).
 
+Start the docker container
+==========================
+.. code:: bash 
+
+    docker run -it ackimball/autocolorization /bin/bash
+
+
 
 Examples & Usage
 ================
