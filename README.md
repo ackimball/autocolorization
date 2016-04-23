@@ -11,7 +11,7 @@ We created a docker container so users can easily colorize, denoise, and upscale
 Start the docker container
 ==========================
 ```
-    docker run -it ackimball/autocolorization /bin/bash
+docker run -it ackimball/autocolorization /bin/bash
 ```
 
 
