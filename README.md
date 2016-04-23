@@ -8,6 +8,12 @@ We accomplished this by leveraging pretrained models released by the authors of 
 
 We created a docker container so users can easily colorize, denoise, and upscale their own videos on any machine that has docker installed (although you'll need a good GPU to do this quickly).
 
+
+<a href="https://www.youtube.com/watch?v=Mlss8RF-v7I
+" target="_blank"><img src="http://i.imgur.com/fK5Mn7M.png" 
+alt="autocolorization" width="848" height="478" border="10" /></a>
+
+
 Start the docker container
 ==========================
 ```
