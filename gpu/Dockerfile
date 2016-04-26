@@ -18,7 +18,20 @@ WORKDIR /home/autocolorization
 
 RUN wget http://eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v0/colorization_release_v0.caffemodel
 
+RUN apt-get -y install libsnappy-dev
+RUN apt-get -y install libgraphicsmagick-dev
 
+RUN git clone https://github.com/torch/distro.git ~/torch --recursive
+WORKDIR /home/torch 
+RUN bash install-deps
+RUN chmod 777 install.sh
+RUN ./install.sh
 
+WORKDIR /home
+RUN luarocks install graphicsmagick # upgrade
+RUN luarocks install lua-csnappy
+RUN luarocks install md5
+RUN luarocks install uuid
 
-
+RUN git clone --depth 1 https://github.com/nagadomi/waifu2x.git
+RUN mv waifu2x/* /home/autocolorization
