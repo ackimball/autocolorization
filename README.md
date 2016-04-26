@@ -14,12 +14,6 @@ We created a docker container so users can easily colorize, denoise, and upscale
 alt="autocolorization" width="848" height="478" border="10" /></a>
 
 
-Start the docker container
-==========================
-```
-docker run -it ackimball/autocolorization /bin/bash
-```
-
 
 Examples & Usage
 ================
@@ -68,4 +62,22 @@ python autocolorization.py
 
 Installation & Setup
 ====================
+We provide a separate dockerfiles for CPUs and GPUs. The docker containers are provisioned for colorization and upscaling.
 
+Docker
+------
+```
+docker run -it ackimball/autocolorization-gpu /bin/bash
+```
+or    
+```
+docker run -it ackimball/autocolorization-cpu /bin/bash
+```
+
+Dependencies
+------------
+- Caffe
+- Torch
+- ffmpeg
+- avconv
+- waifu2x
