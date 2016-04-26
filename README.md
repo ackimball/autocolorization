@@ -17,39 +17,14 @@ alt="autocolorization" width="848" height="478" border="10" /></a>
 
 Examples & Usage
 ================
-
-Colorizing and upscaling your video:
-------------------------------------
-1. Break video into individual frames and extract audio
-```
-./movie2frames your_video.mp4 frames png
-```
-
-2. Run colorization on frames
-```
-python autocolorization.py
-```
-
-3. Denoise and upscale the frames   
-```
-find ./frames -name "*.png" |sort > frames.txt
-mkdir new_frames
-[lua call]
-```
-
-4. Recreate video with colorized and upscaled frames
-```
-avconv -f image2 -r 24 -i new_frames/%d.png -i audio.mp3 -r 24 -vcodec libx264 -crf 16 video.mp4
-```
-
 Colorizing your video: 
 ----------------------
-1. Break video into individual frames and extract audio
+1) Break video into individual frames and extract audio
 ```
 ./movie2frames.sh your_video.avi 
 ```
 
-2. Run colorization on frames
+2) Run colorization on frames
 ```
 python autocolorization.py
 ```
@@ -57,6 +32,30 @@ python autocolorization.py
 3) Recreate video using the colorized frames
 ```
 ./frames2movie.sh new_frames
+```
+
+Colorizing and upscaling your video:
+------------------------------------
+1) Break video into individual frames and extract audio
+```
+./movie2frames your_video.mp4 frames png
+```
+
+2) Run colorization on frames
+```
+python autocolorization.py
+```
+
+3) Denoise and upscale the frames   
+```
+find ./frames -name "*.png" |sort > frames.txt
+mkdir new_frames
+[lua call]
+```
+
+4) Recreate video with colorized and upscaled frames
+```
+avconv -f image2 -r 24 -i new_frames/%d.png -i audio.mp3 -r 24 -vcodec libx264 -crf 16 video.mp4
 ```
 
 
